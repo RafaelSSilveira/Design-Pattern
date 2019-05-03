@@ -7,7 +7,6 @@ require_once './AbstractObserver.php';
 #Subject
 class PatternSubject extends AbstractSubject
 {
-    private $favoritePatterns = null;
     private $observers = array();
     public function __construct()
     {
@@ -30,6 +29,7 @@ class PatternSubject extends AbstractSubject
             $obs->update($this);
         }
     }
+    
     public function updateCows($newFavorites)
     {
         $this->favorites = $newFavorites;
